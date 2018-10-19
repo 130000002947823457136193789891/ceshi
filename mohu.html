@@ -1,0 +1,108 @@
+﻿
+<html>
+<head>
+<meta charset="utf-8">
+<title>测试</title>
+<style>
+#grad1{
+
+height:200px;
+background:-o-linear-gradient(orange,blue);
+background:-moz-linear-gradient(orange,blue);
+background:-webkit-linear-gradient(orange,blue);
+background:linear-gradient(orange,blue);
+-webkit-filter:blur(5px);
+filter:blur(5px);
+}
+
+img3{
+  -webkit-filter:brightness(.5);
+  filter:brightness(.5);
+  -webkit-filter:contrast(1);
+  filter:contrast(1);
+}
+#grad2{
+height:200px;
+background:-o-linear-gradient(blue,gray);
+background:-moz-linear-gradient(blue,gray);
+background:-webkit-linear-gradient(blue,gray);
+background:linear-gradient(blue,gray);
+}
+
+img{
+   -webkit-filter:saturate(200%);
+   filter:saturate(200%);
+   -webkit-filter:opacity(.5);
+   filter:opacity(.5);
+    -webkit-filter:drop-shadow(5px 5px 5px red);
+    filter:drop-shadow(5px 5px 5px red);
+}
+img{
+   -webkit-filter:grayscale(1);
+    filter:grayscale(1);
+     -webkit-filter:hue-rotate(180deg);
+    filter:hue-rotate(180deg);
+    -webkit-filter:invert(1);
+    filter:invert(1);
+}
+
+img{
+-webkit-filter:brightness(120%) contrast(70%) saturate(200%) hue-rotate(30deg) drop-shadow(5px 5px 5px green);
+    filter:brightness(120%) contrast(70%) saturate(200%) hue-rotate(30deg) drop-shadow(5px 5px 5px green);
+}
+
+
+
+img{
+    -webkit-filter:grayscale(1);
+    filter:grayscale(1);
+}
+img:hover{
+    -webkit-filter:grayscale(0);
+    filter:grayscale(0);
+}
+
+.blur-box{
+  position:relative;
+width:300px;
+height:150px;
+background:url("/images/post/blur.jpg");
+padding-top:50px;
+background-size:100%,100%;
+z-index:-1;
+}
+.blur-img{
+ position:relative;
+ width:180px;
+ height:80px;
+padding:10px;
+margin:auto;
+color:#fff;
+ overflow:hidden;
+}
+.blur-img:before{
+ content:'       ';
+ position:absolute;
+left:0;
+top:0;
+right:0;
+bottom:0;
+background:url("5.jpg") no-repeat;
+background-position:-50px,-50px;
+background-size:300px,200px;
+-webkit-filter:blur(5px);
+filter:blur(5px);
+z-index:-1;
+}
+
+</style>
+</head>
+<body>
+<img border="0" src="3.jpg"  alt="ceshi"  width="304" height="228">
+<div id="grad1"></div>
+<div id="grad2"></div>
+<img border="0" src="4.jpg" alt="ceshi2   "   width="304" height="228">
+<img border="0" src="4.jpg" alt="ceshi"  width="304"  height="228">
+</body>
+
+</html>
